@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-// import '../Styles/Style.css';
+import '../Styles/Style.css';
 
+//form for getting the user input. the functions that modify the form state and handle request submission are passed as props from the App component
 class Form extends Component{
 
     render(){
