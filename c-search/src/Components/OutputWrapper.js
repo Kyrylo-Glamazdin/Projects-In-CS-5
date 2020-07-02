@@ -7,9 +7,11 @@ function OutputWrapper(props) {
     if (props.zipData.length > 0){
         return (
             <div className="all-zips-container">
+                <div className="all-zips">
                     {props.zipData.map(zipInfoCard => (
                         <Card key={zipInfoCard} zipData={zipInfoCard}/>
                     ))}
+                </div>
             </div>
         );
     }
