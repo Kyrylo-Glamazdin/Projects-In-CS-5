@@ -1,18 +1,33 @@
 import React, {Component} from 'react';
+import '../Styles/ZipCard.css';
 
 class ZipCard extends Component{
-    constructor(props){
-        super(props)
-    }
+
     render(){
         return(
-            <div>
-                {this.props.zipData.LocationText}
-                {this.props.zipData.State}
-                {this.props.zipData.Lat}
-                {this.props.zipData.Long}
-                {this.props.zipData.EstimantedPopulation}
-                {this.props.zipData.TotalWages}
+            <div className="zip-card-container">
+                <div className="location-text">
+                    {this.props.zipData.LocationText}
+                </div>
+                <ul>
+                    <li> 
+                        {"State: "}
+                        {this.props.zipData.State}
+                    </li>
+                    <li> 
+                        {"Location: "}
+                        ({this.props.zipData.Lat}, 
+                        {this.props.zipData.Long})
+                    </li>
+                    <li>
+                        {"Population (Estimated): "}
+                        {this.props.zipData.EstimatedPopulation}
+                    </li>
+                    <li> 
+                        {"Total Wages: "}
+                        {this.props.zipData.TotalWages}
+                    </li>
+                </ul>
             </div>
         );
     }

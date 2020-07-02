@@ -1,0 +1,28 @@
+.location-text{
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+    width: 500px;
+
+    background-color: rgb(198, 196, 196);
+
+    padding-left: 10px;
+
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    font-weight: bolder;
+}
+
+.zip-card-container{
+    border: solid 1px gray;
+    border-radius: 5px;
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+li{
+    margin-top: 10px;
+}
