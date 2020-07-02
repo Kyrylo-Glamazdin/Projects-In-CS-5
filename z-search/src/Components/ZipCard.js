@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../Styles/ZipCard.css';
 
+//the component for each individual city. displays city's state, locations, population, and total wages
 class ZipCard extends Component{
 
     render(){

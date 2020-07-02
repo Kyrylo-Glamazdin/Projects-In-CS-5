@@ -1,3 +1,5 @@
+// The main app component
+
 import React, {Component} from 'react';
 import axios from 'axios';
 
@@ -11,20 +13,22 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      enteredZip: "",
-      zipInfo: []
+      enteredZip: "", //zip code that the user enters
+      zipInfo: []  //result of the axios request
     }
 
     this.onChangeHandler = this.onChangeHandler.bind(this);
     this.onSubmitHandler = this.onSubmitHandler.bind(this);
   }
 
+  //updates the value of the zip code entered by the user
   onChangeHandler(event){
     this.setState({
       enteredZip: event.target.value
     })
   }
 
+  //makes axios api request to get the data for entered zipcode and stores the result in 'zipInfo' array
   onSubmitHandler(event){
     event.preventDefault();
     this.setState({zipInfo: []})
@@ -40,6 +44,7 @@ class App extends Component {
     })
   }
 
+  //renders the header, the form to enter the zipcode and the wrapper which displays each city's info or 'No results' if zipcode is not fount
   render(){
     return (
       <div>

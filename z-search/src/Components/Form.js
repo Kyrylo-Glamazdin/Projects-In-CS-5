@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../Styles/Style.css';
 
+//form for getting the user zip code input
 class Form extends Component{
 
     render(){
